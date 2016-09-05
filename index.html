@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.2.0/material.indigo-pink.min.css">
+<link rel="stylesheet" href="https://code.getmdl.io/1.2.0/material.indigo-pink.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="css/style.css">
+<script defer src="https://code.getmdl.io/1.2.0/material.min.js"></script>
+<script src="https://code.getmdl.io/1.2.0/material.min.js"></script>
+<title>index</title>
+</head>
+
+  <body>
+<!-- Simple header with scrollable tabs. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">UFOUPDATES</span>
+    </div>
+    <!-- Tabs -->
+    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+      <a href="noticias.html" class="mdl-layout__tab is-active">NOTICIAS</a>
+      <a href="#scroll-tab-2" class="mdl-layout__tab">VÍDEOS</a>
+      <a href="#scroll-tab-3" class="mdl-layout__tab">IMÁGENES</a>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">MÁS</span>
+        <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="">YOUTUBE</a>
+      <a class="mdl-navigation__link" href="">FACEBOOK</a>
+    </nav>
+  </div>
+</div>
+<button id="demo-show-snackbar" class="mdl-button mdl-js-button mdl-button--raised" type="button">Show Snackbar</button>
+<div id="demo-snackbar-example" class="mdl-js-snackbar mdl-snackbar">
+  <div class="mdl-snackbar__text"></div>
+  <button class="mdl-snackbar__action" type="button"></button>
+</div>
+<script>
+(function() {
+  'use strict';
+  var snackbarContainer = document.querySelector('#demo-snackbar-example');
+  var showSnackbarButton = document.querySelector('#demo-show-snackbar');
+  var handler = function(event) {
+    showSnackbarButton.style.backgroundColor = '';
+  };
+  showSnackbarButton.addEventListener('click', function() {
+    'use strict';
+    showSnackbarButton.style.backgroundColor = '#' +
+        Math.floor(Math.random() * 0xFFFFFF).toString(16);
+    var data = {
+      message: 'Button color changed.',
+      timeout: 2000,
+      actionHandler: handler,
+      actionText: 'Undo'
+    };
+    snackbarContainer.MaterialSnackbar.showSnackbar(data);
+  });
+}());
+</script>
+    <p>0</p>
+    <p>0</p>
+<div class="mdl-card">
+ <div class="mdl-card--border">
+  <div class="mdl-card__title">
+     <h2 class="mdl-card__title-text">Auckland Sky Tower<br>Auckland, New Zealand</h2>
+  </div>
+  <div class="mdl-card__media">
+    <img src="images/portada.jpg" width="310" height="150" border="2" alt=""
+     style="padding:10px;">
+  </div>
+  <div class="mdl-card__supporting-text">
+  The Sky Tower is an observation and telecommunications tower located in Auckland,
+  New Zealand. It is 328 metres (1,076 ft) tall, making it the tallest man-made structure
+  in the Southern Hemisphere.
+  </div>
+  <div class="mdl-card__actions">
+     <a href="http://en.wikipedia.org/wiki/Sky_Tower_%28Auckland%29">Wikipedia entry</a>
+  </div>
+ </div>
+</div>
+
+</body>
+</html>
